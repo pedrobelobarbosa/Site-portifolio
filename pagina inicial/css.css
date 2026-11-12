@@ -1,0 +1,39 @@
+/*PARTE DE HEADER*/
+
+header{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    height: 3cm;
+    margin: -10px;
+    
+    
+}.partes{
+    display: flex;
+    gap: 18cm;
+    justify-content: center;
+    align-items: center;
+}
+#logo-header{
+    width: 2.5cm;
+    height: 2.5cm;
+    border-radius: 20px;
+    margin-left: 0.5cm;
+}#perfil-da-header{
+    width: 2.5cm;
+    height: 1.5cm;
+}.logosheader{
+  display: flex;
+  height: 1.2cm;
+  gap: 2cm;
+  color:white;
+}.home{
+    display: flex;
+    flex-direction: column;
+    width: 1cm;
+    text-align: center;
+    
+    align-items: center;
+    
+}.home h1{
+    margin-top: -1px;
+}
