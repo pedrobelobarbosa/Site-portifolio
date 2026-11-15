@@ -1,9 +1,15 @@
+
+body{
+    background-color: #474747;
+}
+
 /*PARTE DE HEADER*/
 #header-principal{
     display: flex;
     background-color: rgb(0, 0, 0);
-    height: 3cm;
-    margin: -10px;
+    height: 2.5cm;
+    margin: -8px;
+    border-bottom: 1px solid #D4AF37;
 }.partes{
     display: flex;
     gap: 18cm;
@@ -12,15 +18,17 @@
 }
 #logo-header{
     width: 2.5cm;
-    height: 2.5cm;
+    height: 2.3cm;
     border-radius: 20px;
     margin-left: 0.5cm;
+    margin-top: 5px;
 }
 .logosheader{
   display: flex;
   height: 1.2cm;
   gap: 1.8cm;
   align-items: center;
+  margin-left: 2cm;
 }.home{
     display: flex;
     flex-direction: column;
@@ -51,11 +59,7 @@
 }#config{
     width:35px ;
 }
-.perfilconfig{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
+
 
 .logosheader img:not(#perfil) {
     transition: 0.4s;
@@ -73,6 +77,22 @@
 }
 
 /* MODAL!!!*/
+
+@keyframes abrirModal {
+    from {
+        opacity: 0;
+        transform: translatex(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-conteudo {
+    animation: abrirModal 0.3s ease-out;
+}
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -248,4 +268,129 @@
 }#escurosimbolo{
     width: 30px;
     margin-top: 10px;
+}
+
+/* PARTE HOME */
+
+#home{
+   background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("imagens/Anel\ Dourado\ em\ Fumaça\ Geométrica.png");
+    position:absolute;
+    display: block;
+    z-index: -1;
+    width: 36.95cm;
+    margin-left: -10px;
+    height: 17.55cm;
+
+}#henrriqueimg{
+    position: absolute;
+    width: 9.4cm;
+    margin-left: 23.3cm;
+    margin-top: 32px;
+    transition: 0.4s;
+}
+
+
+
+.homeconteudo{
+    margin-top: 2cm;
+    margin-left: 1cm;
+}.homename{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: -2cm;
+    
+}.homename h1{
+    color: aliceblue;
+    font-size: 2.5cm;
+}.homename h2{
+    font-size: 2.5cm;
+    color:#e99f0b;
+    filter: brightness(1.3);
+}.homeconteudo h3{
+    color: #e99f0b;
+}.homeh3{
+    display: flex;
+    gap: 10px;
+}.homeh3 img{
+    width: 1.5cm;
+}.texto3class{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: -2.5cm;
+}
+#texto3{
+     color: aliceblue;
+    font-size: 1.2cm;
+}#texto4{
+    font-size: 1.2cm;
+    color: #e99f0b;
+}.texto5 p{
+  font-size: 30px;
+  color: rgb(202, 208, 212);
+  margin-top: -10px;
+}#texto51{
+   margin-top: -30px;
+}.botãoprojetos {
+    display: flex;
+    background: linear-gradient(
+        90deg,
+        #FFC83D 0%,
+        #ecb314 50%,
+        #b68001 100%
+    );
+    width: 10cm;
+    height: 60px;
+    margin-left: 39px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 100px;
+    gap: 10px;
+
+    box-shadow: 0 0 30px 8px rgba(255, 183, 0, 0.4);
+
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    transition: background-position 0.6s ease,
+                transform 0.3s ease;
+
+    margin-top: 100px;
+    cursor: pointer;
+}.botaohome{
+    display: flex;
+}
+
+.botãoprojetos:hover {
+    transform: scale(1.05);
+    background-position: 50% 100%;
+}
+.botãoprojetos h1{
+    font-size: 24px;
+    
+}.botãocontato{
+     display: flex;
+    background-color: black ;
+    width: 7cm;
+    height: 60px;
+    margin-left: 39px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 100px;
+    gap: 10px;
+    border: 3px solid #e99f0b;;
+    margin-top: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}.botãocontato:hover{
+    transition: 0.4s;
+    transform: scale(1.05);
+}
+.botãocontato h1{
+    font-size: 24px;
+    color: aliceblue;
 }
