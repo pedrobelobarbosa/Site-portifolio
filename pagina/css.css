@@ -423,7 +423,10 @@ body{
 
 
 /* Parte Projeto */
-
+.borda{
+    border-bottom: 1px solid #D4AF37;
+    padding: 30px;
+}
 #pagina-projetos{
     background-size: cover;
     background-position: center;
@@ -436,7 +439,77 @@ body{
     margin-left: -10px;
     height: 17.55cm;
 }#laptop{
-    width: 10cm;
+    width: 13cm;
     position: absolute;
-    right: 10%
+    right: 10%;
+    margin-top: -85px;
+}.titulo-projetos{
+    margin: 40px;
+    margin-top: 10px;
+}
+.titulo-projetos h1{
+
+    color: aliceblue;
+    font-size: 60px;
+    margin-top: -20px;
+
+}.titulo-projetos span{
+    color: #ecb314;
+    border-radius: 10px;
+    
+
+}.titulo-projetos p{
+    color: aliceblue;
+    font-size: 20px;
+    margin-top: -20px;
+}
+.Subtitulo{
+    display: flex;
+    color: #e99f0b;
+    gap: 10px;
+    font-size: 20px;
+}.Subtitulo img{
+    width: 1cm;
+}.falsobotoes{
+    display: flex;
+    margin-top: -20px;
+}
+.falsobotao1{
+   display: flex;
+    background-color: black ;
+    width: 5cm;
+    height: 40px;
+    margin-left: 39px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    gap: 10px;
+    border: 3px solid #e99f0b;;
+    font-size: 8px;
+    color: aliceblue;
+}.falsobotao1 img{
+    width: 40px;
+    filter: brightness(0) saturate(100%)
+            invert(75%) sepia(45%)
+            saturate(600%) hue-rotate(5deg);
+}.falsobotao2{
+   display: flex;
+    background-color: black ;
+    width: 5cm;
+    height: 40px;
+    margin-left: 39px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    gap: 10px;
+    border: 3px solid #e99f0b;;
+    font-size: 8px;
+    color: aliceblue;
+}.falsobotao2 img{
+    width: 40px;
+    filter: brightness(0) saturate(100%)
+            invert(75%) sepia(45%)
+            saturate(600%) hue-rotate(5deg);
 }
