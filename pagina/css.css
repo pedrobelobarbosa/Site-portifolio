@@ -36,37 +36,63 @@ body{
     text-align: center;
     align-items: center;
      transition: 0.4s;
-}.home h1{
+    
+}.selecionado{
+     padding: 10px;
+      background: linear-gradient(
+        180deg,
+        #513000,
+        #201300
+    );
+
+    border: 1px solid #ffbf00;
+
+    box-shadow:
+        0 0 15px rgba(255, 183, 0, 0.35),
+        inset 0 0 15px rgba(255, 183, 0, 0.15);
+
+    color: #ffcc33;
+    border-radius: 10px;
+
+}
+.home h1{
     margin-top: -1px;
     font-size: 30px;
 }.home img{
   width: 40px; 
-}#projetos{
+}#iconhome{
+  
+}
+#projetos{
     width:40px;
     transition: 0.4s;
-}#sobre{
+}
+#sobre{
     width: 40px;
     transition: 0.4s;
-}#contato{
+}
+#contato{
     width: 40px;
-}#perfil{
+}
+#perfil{
     width: 50px;
     height: 50px;
     border: 2px solid white;
     border-radius: 50px;
     object-fit: cover;
     transition: 0.4s;
-}#config{
+}
+#config{
     width:35px ;
 }
 
 
-.logosheader img:not(#perfil) {
+.logosheader img {
     transition: 0.4s;
     cursor: pointer;
 }
 
-.logosheader img:not(#perfil):hover {
+.logosheader img:not(.selecionado):hover{
     transform: scale(1.1);
     filter: brightness(0) saturate(100%)
             invert(75%) sepia(45%)
@@ -393,4 +419,24 @@ body{
 .botãocontato h1{
     font-size: 24px;
     color: aliceblue;
+}
+
+
+/* Parte Projeto */
+
+#pagina-projetos{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("imagens/fundo_preto_dourado_4K.png");
+    position:absolute;
+    display: block;
+    z-index: -1;
+    width: 36.95cm;
+    margin-left: -10px;
+    height: 17.55cm;
+}#laptop{
+    width: 10cm;
+    position: absolute;
+    right: 10%
 }

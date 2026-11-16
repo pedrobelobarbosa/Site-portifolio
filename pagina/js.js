@@ -56,3 +56,89 @@ if(temasalvo === "claro"){
 }else{
     botaoclaro.classList.add("ativo")
 }
+
+
+/* PARA SELECIONAR NA HEADER*/
+
+const botaoprojetos= document.getElementById("projetos")
+const trocapagina = document.getElementById("paginahome")
+const botaohome = document.getElementById("iconhome")
+const voltarhome = trocapagina.innerHTML
+const botaoprojetosgrande = document.querySelector(".botãoprojetos")
+
+
+    
+
+
+botaohome.addEventListener("click", function voltarHome(){
+    trocapagina.innerHTML = voltarhome
+})
+
+botaoprojetos.addEventListener("click", function(){
+    fetch("./projetos.html")
+
+.then(resposta => resposta.text())
+.then(html => {
+    trocapagina.innerHTML = html
+})
+})
+
+botaohome.addEventListener("click", function voltarHome(){
+    trocapagina.innerHTML = voltarhome
+})
+
+trocapagina.addEventListener("click", function(evento) {
+    if (evento.target.closest(".botãoprojetos")) {
+        selecionar(botaoprojetos);
+        fetch("./projetos.html")
+            .then(resposta => resposta.text())
+            .then(html => {
+                trocapagina.innerHTML = html;
+            });
+    }
+});
+
+
+/* Selecionado*/
+
+
+/* Selecionado */
+
+/* Selecionado */
+
+/* SELEÇÃO DA HEADER */
+
+const botaosobre = document.getElementById("sobre");
+const botaocontatos = document.getElementById("contato");
+
+const botoes = [
+    botaohome,
+    botaoprojetos,
+    botaosobre,
+    botaocontatos,
+    botaoprojetosgrande
+];
+
+function selecionar(botao) {
+
+    botoes.forEach(item => {
+        item.classList.remove("selecionado");
+    });
+
+    botao.classList.add("selecionado");
+
+    console.log("Selecionado:", botao.id);
+}
+
+// Home começa selecionada
+selecionar(botaohome);
+
+// Seleção ao clicar nos ícones
+botoes.forEach(item => {
+
+    item.addEventListener("click", function() {
+        selecionar(item);
+    });
+
+});
+
