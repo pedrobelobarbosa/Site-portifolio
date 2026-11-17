@@ -30,6 +30,16 @@ document.querySelectorAll("img").forEach((imagem) => {
 const botaoclaro = document.querySelector("#botaoclaro")
 const botaoescuro = document.querySelector("#botaoescuro")
 
+const logo = document.getElementById("logo-header");
+
+function trocarLogo() {
+    if (document.body.classList.contains("tema-claro")) {
+        logo.src = "icons/logomodoescuro.png";
+    } else {
+        logo.src = "icons/Logotipo PH Metálico com Colchetes Codificados.png";
+    }
+}
+
 function selecionartema(){
 
     botaoclaro.classList.remove("ativo")
@@ -37,11 +47,10 @@ function selecionartema(){
 
     this.classList.add("ativo")
 
-    if(this === botaoclaro){
-        localStorage.setItem("tema", "claro")
-    }else{
-        localStorage.setItem("tema", "escuro")
-    }
+    const tema = this === botaoclaro ? "claro" : "escuro";
+    document.body.classList.toggle("tema-claro", tema === "claro");
+    localStorage.setItem("tema", tema);
+    trocarLogo();
 }
 
 botaoclaro.addEventListener("click", selecionartema)
@@ -49,13 +58,15 @@ botaoescuro.addEventListener("click", selecionartema)
 
 const temasalvo = localStorage.getItem("tema")
 
-if(temasalvo === "claro"){
-    botaoclaro.classList.add("ativo")
-}else if(temasalvo === "escuro"){
-    botaoescuro.classList.add("ativo")
-}else{
-    botaoclaro.classList.add("ativo")
+if (temasalvo === "claro") {
+    botaoclaro.classList.add("ativo");
+    document.body.classList.add("tema-claro");
+} else {
+    botaoescuro.classList.add("ativo");
+    document.body.classList.remove("tema-claro");
 }
+
+trocarLogo();
 
 
 /* PARA SELECIONAR NA HEADER*/
@@ -127,7 +138,7 @@ function selecionar(botao) {
 
     botao.classList.add("selecionado");
 
-    console.log("Selecionado:", botao.id);
+    
 }
 
 // Home começa selecionada

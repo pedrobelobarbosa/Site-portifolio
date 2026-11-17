@@ -1,7 +1,21 @@
 
-body{
-    background-color: #474747;
+/* =====================================================
+   PORTFÓLIO PH — ESTILOS ORIGINAIS ORGANIZADOS
+   As dimensões e o posicionamento foram preservados.
+   Tema escuro é o padrão; tema claro usa body.tema-claro.
+   ===================================================== */
+
+:root {
+    --dourado: #D3B06A;
+    --dourado-forte: #E9A90B;
+    --texto-claro: #F0F4F7;
 }
+
+body:not(.selecionado) {
+    background-color: #080808;
+    color: var(--texto-claro);
+}
+
 
 /*PARTE DE HEADER*/
 #header-principal{
@@ -41,8 +55,8 @@ body{
      padding: 10px;
       background: linear-gradient(
         180deg,
-        #513000,
-        #201300
+        #c09049,
+        #4e330b
     );
 
     border: 1px solid #ffbf00;
@@ -60,8 +74,6 @@ body{
     font-size: 30px;
 }.home img{
   width: 40px; 
-}#iconhome{
-  
 }
 #projetos{
     width:40px;
@@ -127,9 +139,7 @@ body{
 /* Header Modal*/
 
 .modal{
-    background-color: rgba(54, 48, 49, 0.699);
-    width: 6cm;
-    height: 4cm;
+    background-color: rgba(16, 13, 10, 0.73);
     display: none;
     position: fixed;
     top: 0;
@@ -139,9 +149,7 @@ body{
     justify-content: center;
     align-items: center;
     transition: 0.3s;
-    
-    
-    
+    z-index: 1000;
 }.modal-conteudo{
     display: flex;
     
@@ -151,10 +159,12 @@ body{
     width: 20cm;
     height: 15cm;
     border-radius: 12px;
+    border: 1px solid rgba(211, 176, 106, .42);
+    box-shadow: 0 24px 70px rgba(0,0,0,.45);
 }#headermodal{
     display: flex;
     margin-left: 10px;
-    gap: 510px;
+    justify-content: space-between;
     border-bottom: 1px solid #D3B06A;
     width: 97%;
 }#headermodal h1{
@@ -171,6 +181,7 @@ body{
 }#fechar{
     width: 35px;
     transition: 0.4s;
+    cursor: pointer;
 }#fechar:hover{
     transition: 0.4s;
     transform: scale(1.1);
@@ -188,9 +199,6 @@ body{
   margin-left: 20px;
   font-size:20px;
   font-weight: 300;
-}.aparencia-tema{
-
-
 }.aparencia-tema h1{
   color: aliceblue;
   margin-left: 20px;
@@ -220,22 +228,13 @@ body{
     transition: 0.2s;
     
 
-}.icone-texto.ativo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+}.icone-texto.ativo {
     background-color: #a18751;
-    width: 8cm;
-    margin-left: 35px;
-    border-radius: 10px;
-    border: 1px solid rgb(82, 81, 81);
-    margin-top: 20px;
-    transition: 0.2s;
+    border-color: rgb(82, 81, 81);
 }
 .icone-texto h1{
     margin-right: 14px ;
-}.icone-texto.icone-texto.ativo h1{
+}.icone-texto.ativo h1{
     color: black;
 }
 .icone-texto:hover{
@@ -264,18 +263,9 @@ body{
     margin-top: 20px;
     transition: 0.2s;
 
-}.icone-texto-escuro.ativo{
-   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+}.icone-texto-escuro.ativo {
     background-color: #a18751;
-    width: 8cm;
-    margin-left: 70px;
-    border-radius: 10px;
-    border: 1px solid rgb(82, 81, 81);
-    margin-top: 20px;
-    transition: 0.2s;
+    border-color: rgb(82, 81, 81);
 }
 .icone-texto-escuro h1{
     margin-right: 20px ;
@@ -288,10 +278,7 @@ body{
     transition: 0.1s;
     transform: scale(1.03);
 }
-#clarosimbolo{
-    width: 30px;
-    margin-top: 10px;
-}#escurosimbolo{
+#escurosimbolo{
     width: 30px;
     margin-top: 10px;
 }
@@ -334,7 +321,17 @@ body{
     font-size: 2.5cm;
 }.homename h2{
     font-size: 2.5cm;
-    color:#e99f0b;
+    background: linear-gradient(
+    180deg,
+    #FFE18A 0%,
+    #EAB52D 35%,
+    #B87900 70%,
+    #D99A0B 100%
+);
+
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
     filter: brightness(1.3);
 }.homeconteudo h3{
     color: #e99f0b;
@@ -355,7 +352,17 @@ body{
     font-size: 1.2cm;
 }#texto4{
     font-size: 1.2cm;
-    color: #e99f0b;
+    background: linear-gradient(
+    180deg,
+    #FFE18A 0%,
+    #EAB52D 35%,
+    #B87900 70%,
+    #D99A0B 100%
+);
+
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }.texto5 p{
   font-size: 30px;
   color: rgb(202, 208, 212);
@@ -397,6 +404,7 @@ body{
 }
 .botãoprojetos h1{
     font-size: 24px;
+    color:#080808
     
 }.botãocontato{
      display: flex;
@@ -408,7 +416,7 @@ body{
     justify-content: center;
     border-radius: 100px;
     gap: 10px;
-    border: 3px solid #e99f0b;;
+    border: 3px solid #e99f0b;
     margin-top: 100px;
     cursor: pointer;
     transition: 0.3s;
@@ -426,12 +434,14 @@ body{
 .borda{
     border-bottom: 1px solid #D4AF37;
     padding: 30px;
+    width: 90%;
+    margin-left: 35px;
 }
 #pagina-projetos{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("imagens/fundo_preto_dourado_4K.png");
+    background-image: url("imagens/Faixas\ Diagonais\ Douradas\ no\ Preto\ Fosco.png");
     position:absolute;
     display: block;
     z-index: -1;
@@ -443,7 +453,12 @@ body{
     position: absolute;
     right: 10%;
     margin-top: -85px;
-}.titulo-projetos{
+    transition:0.3s;
+}#laptop:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.titulo-projetos{
     margin: 40px;
     margin-top: 10px;
 }
@@ -485,7 +500,7 @@ body{
     align-items: center;
     border-radius: 100px;
     gap: 10px;
-    border: 3px solid #e99f0b;;
+    border: 3px solid #e99f0b;
     font-size: 8px;
     color: aliceblue;
 }.falsobotao1 img{
@@ -504,12 +519,207 @@ body{
     align-items: center;
     border-radius: 100px;
     gap: 10px;
-    border: 3px solid #e99f0b;;
+    border: 3px solid #e99f0b;
     font-size: 8px;
     color: aliceblue;
 }.falsobotao2 img{
-    width: 40px;
+    width: 35px;
     filter: brightness(0) saturate(100%)
             invert(75%) sepia(45%)
             saturate(600%) hue-rotate(5deg);
+}.Subtitulo-projetos{
+    display: flex;
+    gap: 10px;
+    margin-left: 70px;
+}.Subtitulo-projetos span{
+    color: #e99f0b;
+}.Subtitulo-projetos img{
+    width: 1cm;
 }
+#area-projeto-titulo{
+    color: aliceblue
+}.Projeto-aurelia{
+    border: 2px solid #e99f0b;
+    width: 33cm;
+    height: 6cm;
+    display: flex;
+    align-items: center;
+    margin-left: 2cm;
+    border-radius: 10px;
+    gap: 20px;
+}#imagem-aurelia{
+    width: 9cm;
+    height: 5cm;
+    margin-left: 20px;
+    border: 3px solid #D4AF37;
+    border-radius: 4px;
+}.titulo-descrição{
+    color: aliceblue;
+    font-size: 15px;
+    margin-top: -70px;
+    margin-left: 40px;
+}.titulo-descrição p{
+    font-size: 20px;
+}.area-tecnologias{
+    display: flex;
+    gap: 10px;
+}.html{
+   border: 1px solid gray;
+   background-color: #11100E;
+   width: 2.5cm;
+   height: 30px;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}.css{
+border: 1px solid gray;
+   background-color: #11100E;
+   width: 2.5cm;
+   height: 30px;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}.js{
+   border: 1px solid gray;
+   background-color: #11100E;
+   width: 2.5cm;
+   height: 30px;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/* =====================================================
+   TEMA CLARO — SOMENTE CORES, FUNDOS E CONTRASTES
+   Não altera width, height, gap, margin nem position.
+   ===================================================== */
+body.tema-claro {
+    background-color: #F7F2EC;
+    color: #181818;
+}
+
+body.tema-claro #header-principal {
+    background-color: #FFF9F3;
+    border-bottom-color: #C58A0A;
+}
+body.tema-claro .logosheader img {
+    filter: brightness(0);
+}
+body.tema-claro .logosheader img:not(.selecionado):hover {
+    filter: brightness(0) saturate(100%) invert(51%) sepia(82%) saturate(650%) hue-rotate(9deg);
+}
+/* A seleção da header é igual nos dois temas. */
+body.tema-claro .logosheader img.selecionado {
+    filter: none;
+}
+body.tema-claro #home {
+    background-image: url("imagens/Fundo Abstrato Claro com Anel Dourado.png");
+}
+body.tema-claro .homename h1,
+body.tema-claro #texto3,
+body.tema-claro .titulo-projetos h1,
+body.tema-claro #area-projeto-titulo,
+body.tema-claro .titulo-descrição {
+    color: #181818;
+}
+body.tema-claro .texto5 p,
+body.tema-claro .titulo-projetos p {
+    color: #484848;
+}
+body.tema-claro .homeconteudo h3,
+body.tema-claro .Subtitulo,
+body.tema-claro .Subtitulo-projetos span {
+    color: #B57900;
+}
+body.tema-claro .homename h2,
+body.tema-claro #texto4 {
+    filter: none;
+    background-image: linear-gradient(180deg, #D7A52A 0%, #C18A0A 55%, #995B00 100%);
+}
+body.tema-claro .botãoprojetos {
+    background-image: linear-gradient(90deg, #FFD76A 0%, #F4BB32 50%, #C58A0A 100%);
+    box-shadow: 0 0 23px rgba(207, 157, 51, .30);
+}
+body.tema-claro .botãocontato,
+body.tema-claro .falsobotao1,
+body.tema-claro .falsobotao2 {
+    background-color: rgba(255, 250, 243, .93);
+    border-color: #C58A0A;
+    color: #161616;
+}
+body.tema-claro .botãocontato h1,
+body.tema-claro .falsobotao1 h1,
+body.tema-claro .falsobotao2 h1 {
+    color: #161616;
+}
+body.tema-claro .botãocontato img,
+body.tema-claro .falsobotoes img {
+    filter: brightness(0);
+}
+body.tema-claro #pagina-projetos {
+    background-image: url("imagens/Fundo Abstrato Claro com Anel Dourado.png");
+}
+body.tema-claro .borda,
+body.tema-claro .Projeto-aurelia,
+body.tema-claro #imagem-aurelia {
+    border-color: #C58A0A;
+}
+body.tema-claro .titulo-projetos span {
+    color: #A66F00;
+}
+body.tema-claro .Projeto-aurelia {
+    background: rgba(255, 251, 245, .68);
+}
+body.tema-claro .html,
+body.tema-claro .css,
+body.tema-claro .js {
+    background-color: #FFF9F0;
+    border-color: #BDA981;
+}
+body.tema-claro .area-tecnologias img {
+    filter: brightness(0);
+}
+
+/* Modal no tema claro — mantém os mesmos blocos e dimensões. */
+body.tema-claro .modal {
+    background-color: rgba(28, 22, 17, .48);
+}
+body.tema-claro .modal-conteudo {
+    background-color: #FFFBF6;
+    border-color: #D4AF37;
+    box-shadow: 0 24px 70px rgba(50, 32, 15, .25);
+}
+body.tema-claro #headermodal h1,
+body.tema-claro .aparencia-tema h1 {
+    color: #222;
+}
+body.tema-claro .aparencia h1 {
+    color: #A77414;
+}
+body.tema-claro .aparencia-tema h1 {
+    color: #222;
+}
+body.tema-claro .icone-texto,
+body.tema-claro .icone-texto-escuro {
+    background-color: #F2E9DB;
+    border-color: #C8AE7B;
+}
+body.tema-claro .icone-texto h1,
+body.tema-claro .icone-texto-escuro h1 {
+    color: #222;
+}
+body.tema-claro .icone-texto img,
+body.tema-claro .icone-texto-escuro img {
+    filter: brightness(0);
+}
+body.tema-claro .icone-texto.ativo,
+body.tema-claro .icone-texto-escuro.ativo {
+    background-color: #E2BC6F;
+    border-color: #A87920;
+}
+/* Feedback discreto do botão do modal; nenhuma mudança de tamanho. */
+.icone-texto,
+.icone-texto-escuro { cursor: pointer; }
