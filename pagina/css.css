@@ -293,7 +293,7 @@ body:not(.selecionado) {
     position:absolute;
     display: block;
     z-index: -1;
-    width: 36.95cm;
+    width: 100%;
     margin-left: -10px;
     height: 17.55cm;
 
@@ -445,7 +445,7 @@ background-clip: text;
     position:absolute;
     display: block;
     z-index: -1;
-    width: 36.95cm;
+    width: 100%;
     margin-left: -10px;
     height: 17.55cm;
 }#laptop{
@@ -518,12 +518,11 @@ background-clip: text;
     justify-content: center;
     align-items: center;
     border-radius: 100px;
-    gap: 10px;
     border: 3px solid #e99f0b;
     font-size: 8px;
     color: aliceblue;
 }.falsobotao2 img{
-    width: 35px;
+    width: 33px;
     filter: brightness(0) saturate(100%)
             invert(75%) sepia(45%)
             saturate(600%) hue-rotate(5deg);
@@ -556,15 +555,16 @@ background-clip: text;
 }.titulo-descrição{
     color: aliceblue;
     font-size: 15px;
-    margin-top: -70px;
+    margin-top: -30px;
     margin-left: 40px;
 }.titulo-descrição p{
     font-size: 20px;
+    
 }.area-tecnologias{
     display: flex;
     gap: 10px;
 }.html{
-   border: 1px solid gray;
+   border: 3px solid rgb(105, 104, 104);
    background-color: #11100E;
    width: 2.5cm;
    height: 30px;
@@ -573,7 +573,7 @@ background-clip: text;
    align-items: center;
    justify-content: center;
 }.css{
-border: 1px solid gray;
+border: 3px solid rgb(105, 104, 104);
    background-color: #11100E;
    width: 2.5cm;
    height: 30px;
@@ -582,7 +582,7 @@ border: 1px solid gray;
    align-items: center;
    justify-content: center;
 }.js{
-   border: 1px solid gray;
+   border: 3px solid rgb(105, 104, 104);
    background-color: #11100E;
    width: 2.5cm;
    height: 30px;
@@ -590,6 +590,13 @@ border: 1px solid gray;
    display: flex;
    align-items: center;
    justify-content: center;
+}.video-aurelia{
+    margin-right: 10px;
+}
+.video-aurelia video{
+   width: 9.5cm;
+   border: 1px solid #4e4e4d;
+   border-radius: 10px;
 }
 
 /* =====================================================
@@ -597,12 +604,12 @@ border: 1px solid gray;
    Não altera width, height, gap, margin nem position.
    ===================================================== */
 body.tema-claro {
-    background-color: #F7F2EC;
+    background-color: #ebd6c1;
     color: #181818;
 }
 
 body.tema-claro #header-principal {
-    background-color: #FFF9F3;
+    background-color: #e6d3c1;
     border-bottom-color: #C58A0A;
 }
 body.tema-claro .logosheader img {
@@ -616,7 +623,7 @@ body.tema-claro .logosheader img.selecionado {
     filter: none;
 }
 body.tema-claro #home {
-    background-image: url("imagens/Fundo Abstrato Claro com Anel Dourado.png");
+    background-image: url("imagens/Geometria\ dourada\ em\ luz\ suave.png");
 }
 body.tema-claro .homename h1,
 body.tema-claro #texto3,
@@ -646,7 +653,7 @@ body.tema-claro .botãoprojetos {
 body.tema-claro .botãocontato,
 body.tema-claro .falsobotao1,
 body.tema-claro .falsobotao2 {
-    background-color: rgba(255, 250, 243, .93);
+    background-color: rgba(218, 205, 186, 0.93);
     border-color: #C58A0A;
     color: #161616;
 }
@@ -660,7 +667,7 @@ body.tema-claro .falsobotoes img {
     filter: brightness(0);
 }
 body.tema-claro #pagina-projetos {
-    background-image: url("imagens/Fundo Abstrato Claro com Anel Dourado.png");
+    background-image: url("imagens/backprojetosclaro.png")
 }
 body.tema-claro .borda,
 body.tema-claro .Projeto-aurelia,
@@ -671,13 +678,13 @@ body.tema-claro .titulo-projetos span {
     color: #A66F00;
 }
 body.tema-claro .Projeto-aurelia {
-    background: rgba(255, 251, 245, .68);
+    background: rgba(212, 181, 135, 0.68);
 }
 body.tema-claro .html,
 body.tema-claro .css,
 body.tema-claro .js {
-    background-color: #FFF9F0;
-    border-color: #BDA981;
+    background-color: rgba(218, 205, 186, 0.93);
+    border-color: #777570;
 }
 body.tema-claro .area-tecnologias img {
     filter: brightness(0);
